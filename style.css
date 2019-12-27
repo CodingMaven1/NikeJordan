@@ -1,0 +1,208 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #61605D;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main{
+    height: 90vh;
+    width: 70vw;
+    background-color: #E9E9E9;
+    margin: 0 auto;
+    transform: translateY(4rem);
+    overflow: hidden;
+}
+
+.div--red{
+    height: 28vh;
+    width: 17vw;
+    background-color: #CE0C09;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 10%;
+}
+
+.text{
+    font-size: 1.6rem;
+    color: #E9E9E9;
+    margin-left: 1.8rem;
+    margin-right: 3px;
+    transform: translateY(3rem);
+}
+
+.heading{
+    transform: rotate(270deg);
+    color: #282724;
+    font-size: 3rem;
+    position: absolute;
+    top: 55%;
+    left: 2%;
+}
+
+.heading--1{
+    font-size: 1.1rem;
+    font-weight: 600;
+    transform: translateX(1rem);
+}
+
+.para{
+    font-size: 1.2rem;
+    font-weight: 400;
+    position: absolute;
+    top: 37%;
+    left: 40%;
+}
+
+.heading--2{
+    font-size: 11rem;
+    font-weight: 700;
+}
+
+.img1{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 80vh;
+    width: auto;
+}
+
+.img2{
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    height: 40vh;
+    width: auto;
+}
+
+.pic--number{
+    color: #fff;
+    font-weight: 600;
+}
+
+.img3{
+    height: 64vh;
+    width: auto;
+    position: absolute;
+    top: 7%;
+    right: -50%;
+}
+
+.img4{
+    height: 64vh;
+    width: auto;
+    position: absolute;
+    top: 7%;
+    right: -50%;
+}
+
+/* .img5{
+    height: 64vh;
+    width: auto;
+    position: absolute;
+    top: 7%;
+    right: 61.3%;
+} */
+
+.pic--number div{
+    position: absolute;
+    font-size: 3rem;
+    top: 16%;
+    right: 30%;
+    z-index: 1;
+}
+
+.four{
+    font-size: 1rem;
+    position: absolute;
+    top: 17%;
+    right: 27.5%;
+    z-index: 1;
+}
+
+.zero{
+    font-size: 3rem;
+    z-index: 10;
+}
+
+.zero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 33%;
+    z-index: 5;
+    background-color: #000;    
+}
+
+.sideHeading{
+    transform: rotate(90deg);
+    color: #E9E9E9;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 36%;
+    right: -9%;
+    z-index: 10;
+}
+
+.sideHeading h1{
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.button{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+    color: #E9E9E9;
+    border: 1.5px solid #E9E9E9;
+    position: absolute;
+    bottom: 3%;
+    right: 4%;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    z-index: 100;
+}
+
+.backbutton{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+    color: #282724;
+    border: 1.5px solid #282724;
+    position: absolute;
+    bottom: 3%;
+    right: -25%;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    z-index: 100;
+    opacity: 0;
+}
+
+.button:hover{
+    text-decoration: none;
+    color: #E9E9E9;
+}
+
+.texture{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+    /* background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.png"); */
+    height: 70vh;
+    width: 51vw;
+}

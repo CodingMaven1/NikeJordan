@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Neomi</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+
+        <!-- FIRST PAGE -->
+
+        <div class="div--red">
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil minus iste corporis exercitationem aperiam ut.</p>
+        </div>
+
+        <div class="texture">
+
+        </div>
+
+        <div class="div--pic">
+            <div class="heading">
+                <h4 class="heading--1">
+                    A Surreal Whisper
+                </h4>
+                <h1 class="heading--2">
+                    Noemi
+                </h1>
+            </div>
+
+            <p class="para">Experience the ultimate <br>  comfort of flyknits. The <br> Mesh Quality is good and<br> the sole is very comfortable!</p>
+            
+            <h1 class="pic--number"> <div><span class="zero">0</span>1</div> <span class="four">/ 04</span></h1>
+
+            <div class="sideHeading">
+                <h1>
+                    Nike
+                </h1>
+                <h1>
+                    Jordan Edition
+                </h1>
+            </div>
+
+            <img src="shoes.jpg" alt="" class="img1">
+            <img src="man.jpg" alt="" class="img2">
+
+            <a href="#" class="button">next</a>
+            <a href="#" class="backbutton">back</a>
+
+        </div>
+
+        <!-- SECOND PAGE -->
+
+        <div class="images">
+            <img src="man2.jpg" alt="" class="img3">
+            <img src="man3.jpg" alt="" class="img4">
+            <!-- <img src="shoes.jpg" alt="" class="img5"> -->
+        </div>
+
+    </div>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.4/dist/gsap.min.js"></script>
+    <script>
+
+        var tl = gsap.timeline({ paused: true});
+
+        tl.to('.div--red',{height: 0, duration: 1.5, ease: "expo.out"});
+        tl.to('.text',{opacity: 0, duration:0.5},'-=0.5');
+        tl.to('.img2',{translateY: 290, duration: 1.5, ease: "expo.out"},'-=1.5');
+        tl.to('.button',{translateX: 170, opacity:0, duration: 1.5, ease: "expo.out"},'-=1.5');
+        tl.to('.para',{opacity:0, duration: 0.8},'-=1');
+        tl.to('.pic--number',{opacity: 0,duration: 0.5},'-=1');
+        tl.to('.sideHeading',{opacity: 0,translateX: -50, duration: 0.5},'-=1');
+        tl.to('.heading',{opacity:0, duration:0.5, ease: "rough({ template: none.out, strength:  1, points: 20, taper: 'none', randomize: true, clamp: false})"},);
+        tl.to('.img1',{top:'7%',right:'61.3%',height:'64vh',duration: 1.1, ease: "elastic.out(1, 1.2)" },'-=0.4');
+        tl.fromTo('.img3',{opacity: 0, right:'0'},{opacity: 1, right:'31.5%', height: '64vh', duration: 1.4, ease: "elastic.out(1, 1.2)"},'-=0.2');
+        tl.fromTo('.img4',{opacity: 0, right:'-25%'},{opacity: 1, right:'0', height: '64vh', duration: 1, ease: "elastic.out(1, 1.2)"},'-=0.1');
+        tl.to('.texture',{translateY: 200, duration: 1.2}, '-=0.5');
+        tl.to('.backbutton',{right:'4%',opacity: 1, duration: 1, ease: "expo.out"},'-=0.5');
+
+
+        var next = document.querySelector('.button');
+        var back = document.querySelector('.backbutton');
+
+        next.addEventListener('click',() => {
+            tl.play();
+        });
+
+        back.addEventListener('click', () => {
+            tl.reverse();
+        })
+    </script>
+</body>
+</html>
